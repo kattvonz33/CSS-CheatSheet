@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <head>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <h1>CSS Selectors & Specificity</h1>
+      <br />
+      <br />
+    </head>
+    <h2>Selectors</h2>
+    <table id="selectors">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">CSS Example</th>
+        <th scope="col">HTML Example</th>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td>Matches the type of the element in the HTML doc</td>
+        <td>p {}, div{}</td>
+        <td>&lt;p&gt; , &lt;div&gt;</td>
+      </tr>
+      <tr>
+        <td>Universal</td>
+        <td>Selects all elements of any type</td>
+        <td>* {}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Class</td>
+        <td>One of the most common ways to select an element</td>
+        <td>".class"</td>
+        <td>&lt;p class='class'&gt;</td>
+      </tr>
+      <tr>
+        <td>ID</td>
+        <td>
+          Used for uniquely styling an HTML element <br />(IDs override types
+          and classes)
+        </td>
+        <td>#description</td>
+        <td>&lt;h1 id='description'&gt;</td>
+      </tr>
+      <tr>
+        <td>Attribute</td>
+        <td>Used to target HTML elements that already contain attributes</td>
+        <td>img[src*='winter']{height: 50px}</td>
+        <td>&lt;img src='/images/winter.jpg'&gt;</td>
+      </tr>
+      <tr>
+        <td>Pseudo-Class</td>
+        <td>
+          Changes the appearance/state of certain elements, after certain
+          interactions: Focus, Visited, Disabled, Active, Hover
+        </td>
+        <td colspan="2">p:hover {background-color:blue}</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <h2>Specificity</h2>
+    <table id="Specificity">
+      <tr>
+        <th scope="row">IDs</th>
+      </tr>
+      <tr>
+        <th scope="row">Classes</th>
+      </tr>
+      <tr>
+        <th scope="row">Type</th>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <table id="chaining">
+      <tr>
+        <th scope="row">Name</th>
+        <th scope="row">Description</th>
+        <th scope="row">Example</th>
+      </tr>
+      <tr>
+        <td>Chaining</td>
+        <td>Combining multiple selectors</td>
+        <td>h1.special {}</td>
+      </tr>
+      <tr>
+        <td>Descendant Combinator</td>
+        <td>Selects elements that are nested within descendants</td>
+        <td>
+          &lt;ul class='main-list'&gt; &lt;li&gt;...&lt;/li&gt;<br />the nested
+          elements can be selected with <br />".main-list li{}"
+        </td>
+      </tr>
+
+      <tr>
+        <td>Multiple Selectors</td>
+        <td>
+          Separating CSS selectors with a comma allows for multiple selectors
+        </td>
+        <td>h1, .menu {font-family: georgia;}</td>
+      </tr>
+    </table>
+  </body>
+</html>
